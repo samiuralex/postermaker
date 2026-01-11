@@ -1,11 +1,12 @@
 :root {
-    --bg-color: #0f172a;
-    --card-bg: #1e293b;
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    --accent: #3b82f6;
-    --accent-hover: #2563eb;
-    --border-color: #334155;
+    --bg-color: #fdfdfd;
+    --card-bg: #ffffff;
+    --text-primary: #101010;
+    --text-secondary: #004d3d;
+    --accent: #006a4e;
+    /* Bangladesh Green */
+    --accent-hover: #004d38;
+    --border-color: #e2e8f0;
     --font-main: 'Outfit', sans-serif;
 }
 
@@ -36,10 +37,7 @@ header {
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: -0.05em;
-    background: linear-gradient(135deg, #60a5fa, #a78bfa);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--accent);
 }
 
 main {
@@ -68,9 +66,11 @@ main {
 .card {
     background-color: var(--card-bg);
     padding: 2rem;
-    border-radius: 1rem;
+    border-radius: 12px;
     border: 1px solid var(--border-color);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .card h2 {
