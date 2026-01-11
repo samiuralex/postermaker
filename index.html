@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">PostrGen</div>
+        <button id="toggle-admin-btn" class="btn secondary">Admin Setup</button>
+    </header>
+
+    <main>
+        <!-- Admin Section -->
+        <section id="admin-section" class="hidden">
+            <div class="card">
+                <h2>Template Setup</h2>
+                <p>Upload your background template and define the photo area.</p>
+                <div class="file-input-group">
+                    <label for="template-upload" class="file-label">
+                        <span>Upload Template</span>
+                        <input type="file" id="template-upload" accept="image/*">
+                    </label>
+                </div>
+
+                <div class="controls">
+                    <div class="control-group">
+                        <label>X: <input type="number" id="slot-x" value="0"></label>
+                        <label>Y: <input type="number" id="slot-y" value="0"></label>
+                        <label>W: <input type="number" id="slot-w" value="200"></label>
+                        <label>H: <input type="number" id="slot-h" value="200"></label>
+                    </div>
+                    <button id="save-config-btn" class="btn primary">Save Configuration</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Generator Section -->
+        <section id="generator-section">
+            <div class="preview-area">
+                <canvas id="poster-canvas"></canvas>
+                <div id="loading-overlay" class="hidden">Processing...</div>
+            </div>
+
+            <div class="actions">
+                <div class="file-input-group">
+                    <label for="user-name-input" class="file-label large">
+                        <input type="text" id="user-name-input" placeholder="Enter Name">
+                    </label>
+                </div>
+                <div class="file-input-group">
+                    <label for="user-photo-upload" class="file-label large">
+                        <span id="photo-label-text">Upload Your Photo</span>
+                        <input type="file" id="user-photo-upload" accept="image/*,image/svg+xml">
+                    </label>
+                </div>
+
+                <button id="download-btn" class="btn primary" disabled>Download Poster</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Design your moment.</p>
+    </footer>
+
+    <script src="template_data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
